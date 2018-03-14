@@ -14,4 +14,9 @@
     <string name="date">Delivery at:</string>
 
     <string name="deliverydate">3 hours</string>
+
+    <string name="filetsteak">Filet Steak</string>
+    <string name="wingpaddle">Wing Paddle</string>
+    <string name="chickenheart">Chicken Heart</string>
+    <string name="rib">Rib</string>
 </resources>

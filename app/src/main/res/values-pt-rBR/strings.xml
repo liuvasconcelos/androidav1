@@ -15,4 +15,9 @@
     <string name="date">Entrega as:</string>
 
     <string name="deliverydate">3 horas</string>
+    
+    <string name="filetsteak">Picanha</string>
+    <string name="wingpaddle">Coxinha da asa</string>
+    <string name="chickenheart">Coração</string>
+    <string name="rib">Costela</string>
 </resources>

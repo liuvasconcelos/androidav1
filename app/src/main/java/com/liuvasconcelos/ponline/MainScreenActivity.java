@@ -22,11 +22,15 @@ public class MainScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTheme(R.style.AppTheme);
         setContentView(R.layout.mainscreen);
+        String filetSteak = getString(R.string.filetsteak);
+        String wingPaddle = getString(R.string.wingpaddle);
+        String chickenHeart = getString(R.string.chickenheart);
+        String rib = getString(R.string.rib);
 
-        products.add(new Product(R.drawable.picanha, "Picanha", loremipsum));
-        products.add(new Product(R.drawable.aves1, "Coxinha da asa", loremipsum));
-        products.add(new Product(R.drawable.coracao, "Coração", loremipsum));
-        products.add(new Product(R.drawable.costelapremium, "Costela", loremipsum));
+        products.add(new Product(R.drawable.picanha, filetSteak, loremipsum));
+        products.add(new Product(R.drawable.aves1, wingPaddle, loremipsum));
+        products.add(new Product(R.drawable.coracao, chickenHeart, loremipsum));
+        products.add(new Product(R.drawable.costelapremium, rib, loremipsum));
 
         ArrayProductAdapter adapter = new ArrayProductAdapter(this, products);
 
