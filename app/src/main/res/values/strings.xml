@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">P.online</string>
+
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="loginrequest">Enter your login</string>
+    <string name="passwordrequest">Enter your password</string>
+    <string name="loginbutton">Login</string>
+
+    <string name="toast">Invalid e-mail or password</string>
+    <string name="backpress">Go back</string>
+
+    <string name="price">Price</string>
+    <string name="date">Delivery at:</string>
+</resources>

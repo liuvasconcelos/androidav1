@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">P.online</string>
+
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="loginrequest">Digite seu e-mail</string>
+    <string name="passwordrequest">Digite sua senha</string>
+    <string name="loginbutton">Entrar</string>
+
+    <string name="toast">E-mail ou senha incorreta</string>
+    <string name="backpress">Voltar</string>
+
+    <string name="price">Preço: </string>
+    <string name="date">Entrega as:</string>
+</resources>
