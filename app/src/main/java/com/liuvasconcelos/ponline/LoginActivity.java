@@ -12,7 +12,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.AppThemeLogin);
+        setTheme(R.style.AppTheme);
         setContentView(R.layout.login);
 
         Button button =  (Button) findViewById(R.id.login_button);

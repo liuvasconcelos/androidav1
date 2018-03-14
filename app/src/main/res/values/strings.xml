@@ -12,4 +12,6 @@
 
     <string name="price">Price</string>
     <string name="date">Delivery at:</string>
+
+    <string name="deliverydate">3 hours</string>
 </resources>

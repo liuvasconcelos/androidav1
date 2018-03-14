@@ -3,6 +3,8 @@ package com.liuvasconcelos.ponline;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.ListView;
 
 import com.liuvasconcelos.ponline.model.ArrayProductAdapter;
@@ -30,11 +32,28 @@ public class MainScreenActivity extends AppCompatActivity {
 
         ListView list = (ListView) findViewById(R.id.list_view);
         list.setAdapter(adapter);
+        mainToolbarSetup();
+
 
     }
-    public void goToDetail() {
-        Intent intent = new Intent(this, DetailScreenActivity.class);
-        startActivity(intent);
+
+    private void mainToolbarSetup(){
+
+        Toolbar mainToolbar = (Toolbar) findViewById(R.id.main_screen_toolbar);
+
+        if (mainToolbar != null){
+            setSupportActionBar(mainToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+            mainToolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_arrow_left));
+            mainToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MainScreenActivity.super.onBackPressed();
+                }
+            });
+        }
     }
 
 }

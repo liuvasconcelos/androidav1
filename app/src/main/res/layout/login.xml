@@ -12,7 +12,7 @@
         android:id="@+id/screen_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/logingradient"
+        android:background="@drawable/triangulo"
         android:orientation="vertical">
 
         <TextView
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="@string/email"
-                android:textColor="@color/white"
+                android:textColor="@color/gradientColor2"
                 android:textSize="15dp"
                 />
 
@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:hint="@string/loginrequest"
-                android:textColor="@color/white"
+                android:textColor="@color/gradientColor2"
                 android:textSize="12dp"
                 android:textColorHint="@color/colorAccent" />
 
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="@string/password"
-                android:textColor="@color/white"
+                android:textColor="@color/gradientColor2"
                 android:textSize="15dp" />
 
             <EditText
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:hint="@string/passwordrequest"
-                android:textColor="@color/white"
+                android:textColor="@color/gradientColor2"
                 android:textSize="12dp"
                 android:textColorHint="@color/colorAccent" />
 
@@ -76,12 +76,13 @@
 
         <Button
             android:id="@+id/login_button"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
             android:background="@color/colorAccent"
             android:text="@string/loginbutton"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 
