@@ -24,7 +24,9 @@
             />
     </android.support.v7.widget.Toolbar>
 
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:id="@+id/detail_item_layout"
         android:layout_width="match_parent"
@@ -114,6 +116,6 @@
                 android:textSize="20dp"/>
         </LinearLayout>
     </LinearLayout>
-
+</ScrollView>
 
 </LinearLayout>

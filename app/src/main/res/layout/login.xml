@@ -51,7 +51,8 @@
                 android:hint="@string/loginrequest"
                 android:textColor="@color/gradientColor2"
                 android:textSize="12dp"
-                android:textColorHint="@color/colorAccent" />
+                android:textColorHint="@color/colorAccent"
+                />
 
             <TextView
                 android:id="@+id/password_text_view"
@@ -68,9 +69,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:hint="@string/passwordrequest"
+                android:inputType="numberPassword"
                 android:textColor="@color/gradientColor2"
-                android:textSize="12dp"
-                android:textColorHint="@color/colorAccent" />
+                android:textColorHint="@color/colorAccent"
+                android:textSize="12dp" />
 
         </LinearLayout>
 

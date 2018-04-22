@@ -24,8 +24,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = emailInfo.getText().toString();
                 String password = passwordInfo.getText().toString();
-//                if(email.equals("ltenoriovasconcelos@gmail.com") && password.equals("123456")) {
-                if(email.equals("1") && password.equals("1")) {
+                if(email.equals("ltenoriovasconcelos@gmail.com") && password.equals("123456")) {
                    goToMainScreen();
                 } else {
                    showToast();
