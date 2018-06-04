@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "876222604717",
+    "firebase_url": "https://lojadecarnes-b8772.firebaseio.com",
+    "project_id": "lojadecarnes-b8772",
+    "storage_bucket": "lojadecarnes-b8772.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876222604717:android:31f8edf61055b105",
+        "android_client_info": {
+          "package_name": "com.liuvasconcelos.ponline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "876222604717-po6od8kvssies3mvkocq1nhl1lfjg3id.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.liuvasconcelos.ponline",
+            "certificate_hash": "b8160444783f37ea11219506da8420e4441d4b3e"
+          }
+        },
+        {
+          "client_id": "876222604717-l3592semcmec9t81tfpapj2qpnaf0qpv.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "876222604717-l3592semcmec9t81tfpapj2qpnaf0qpv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXFnrkPkfyz-R9uYBgU8daPYgH5ZRvSsE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "876222604717-l3592semcmec9t81tfpapj2qpnaf0qpv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
