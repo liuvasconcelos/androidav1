@@ -23,36 +23,24 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.login);
 
         Button button =  (Button) findViewById(R.id.login_button);
+        Button registerButton =  (Button) findViewById(R.id.register_button);
         final EditText emailInfo = (EditText) findViewById(R.id.login_request_edit_text);
         final EditText passwordInfo = (EditText) findViewById(R.id.password_request_edit_text);
-
-        String email = "ltenoriovasconcelos@gmail.com";
-        String senha = "123456";
-        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-
-        firebaseAuth.createUserWithEmailAndPassword(email, senha)
-                .addOnCompleteListener(
-                        this,     //Contexto da activity
-                        new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                System.out.print("sucesso");
-                            }
-                        });
-
-
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String email = emailInfo.getText().toString();
                 String password = passwordInfo.getText().toString();
-//                if(email.equals("ltenoriovasconcelos@gmail.com") && password.equals("123456")) {
-//                   goToMainScreen();
-//                } else {
-//                   showToast();
-//                }
+
                 firebaseAuth(email, password);
+            }
+        });
+
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToRegisterScreen();
             }
         });
 
@@ -65,9 +53,9 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            FirebaseUser usuario = FirebaseAuth.getInstance().getCurrentUser();
-                            String email = usuario.getEmail();
-                            System.out.println("usuario: "+email);
+//                            FirebaseUser usuario = FirebaseAuth.getInstance().getCurrentUser();
+//                            String email = usuario.getEmail();
+//                            System.out.println("usuario: "+email);
                             goToMainScreen();
                         } else {
                             showToast();
@@ -84,5 +72,10 @@ public class LoginActivity extends AppCompatActivity {
 
     private void showToast() {
         Toast.makeText(getApplicationContext(), R.string.toast, Toast.LENGTH_SHORT).show();
+    }
+
+    private void goToRegisterScreen() {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 }

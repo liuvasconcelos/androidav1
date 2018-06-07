@@ -1,22 +1,26 @@
 package com.liuvasconcelos.ponline.model;
 
 public class Product {
-    private int image;
     private String name;
     private String description;
+    private String id;
+    private String price;
+    private String deliveryTime;
 
-    public Product (int image, String name, String description) {
-        this.image       = image;
-        this.name        = name;
-        this.description = description;
+    public Product (String id, String name, String description, String price, String deliveryTime) {
+        this.id           = id;
+        this.name         = name;
+        this.description  = description;
+        this.price        = price;
+        this.deliveryTime = deliveryTime;
     }
 
-    public int getImage () {
-        return this.image;
+    public Product() {
+
     }
 
-    public void setImage (int image) {
-        this.image = image;
+    public String getId () {
+        return this.id;
     }
 
     public String getName () {
@@ -33,5 +37,13 @@ public class Product {
 
     public void setDescription (String description) {
         this.description = description;
+    }
+
+    public String getDeliveryTime () {
+        return this.deliveryTime;
+    }
+
+    public String getPrice () {
+        return this.price;
     }
 }

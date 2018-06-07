@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:mContext="com.liuvasconcelos.ponline.LoginActivity">
+    tools:mContext="com.liuvasconcelos.ponline.RegisterActivity">
 
 
 
@@ -16,14 +16,14 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/name_of_the_app"
+            android:id="@+id/register_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="30dp"
-            android:text="@string/app_name"
-            android:textSize="80dp"
+            android:text="@string/registerbutton"
+            android:textSize="50dp"
             android:textColor="@color/colorAccent"
             android:fontFamily="casual"/>
 
@@ -44,14 +44,14 @@
                 />
 
             <EditText
-                android:id="@+id/login_request_edit_text"
+                android:id="@+id/enter_login"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:hint="@string/loginrequest"
+                android:hint="@string/email"
                 android:textColor="@color/gradientColor2"
                 android:textSize="12dp"
-                android:textColorHint="@color/colorAccent"
+                android:textColorHint="@color/gradientColor1"
                 />
 
             <TextView
@@ -64,30 +64,20 @@
                 android:textSize="15dp" />
 
             <EditText
-                android:id="@+id/password_request_edit_text"
+                android:id="@+id/enter_password"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:hint="@string/passwordrequest"
+                android:hint="@string/password"
                 android:inputType="numberPassword"
                 android:textColor="@color/gradientColor2"
-                android:textColorHint="@color/colorAccent"
+                android:textColorHint="@color/gradientColor1"
                 android:textSize="12dp" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/login_button"
-            android:layout_width="150dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:background="@color/colorAccent"
-            android:text="@string/loginbutton"
-            android:layout_marginTop="30dp"
-            android:textColor="@color/white"/>
-
-        <Button
-            android:id="@+id/register_button"
+            android:id="@+id/register_button_on_register"
             android:layout_width="150dp"
             android:layout_height="30dp"
             android:layout_gravity="center"

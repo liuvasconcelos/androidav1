@@ -12,7 +12,7 @@ import android.widget.TextView;
 import static java.lang.Integer.valueOf;
 
 public class DetailScreenActivity extends AppCompatActivity {
-    public static final String IMAGE = "IMAGE";
+
     public static final String NAME = "NAME";
     public static final String DESCRIPTION = "DESCRIPTION";
 
@@ -25,12 +25,8 @@ public class DetailScreenActivity extends AppCompatActivity {
         mainToolbarSetup();
 
         Bundle b = getIntent().getExtras();
-        int imageValue = b.getInt(IMAGE);
         String nameValue = b.getString(NAME);
         String descriptionValue = b.getString(DESCRIPTION);
-
-        ImageView image = (ImageView) findViewById(R.id.detail_item_image);
-        image.setImageResource(imageValue);
 
         TextView name = (TextView) findViewById(R.id.detail_item_product_name);
         name.setText(nameValue);

@@ -5,8 +5,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.liuvasconcelos.ponline.model.ArrayProductAdapter;
 import com.liuvasconcelos.ponline.model.Product;
 
@@ -22,24 +29,93 @@ public class MainScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTheme(R.style.AppTheme);
         setContentView(R.layout.mainscreen);
-        String filetSteak = getString(R.string.filetsteak);
-        String wingPaddle = getString(R.string.wingpaddle);
-        String chickenHeart = getString(R.string.chickenheart);
-        String rib = getString(R.string.rib);
 
-        products.add(new Product(R.drawable.picanha, filetSteak, loremipsum));
-        products.add(new Product(R.drawable.aves1, wingPaddle, loremipsum));
-        products.add(new Product(R.drawable.coracao, chickenHeart, loremipsum));
-        products.add(new Product(R.drawable.costelapremium, rib, loremipsum));
+        Button button =  (Button) findViewById(R.id.add_button);
 
-        ArrayProductAdapter adapter = new ArrayProductAdapter(this, products);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToAddItem();
+            }
+        });
 
-        ListView list = (ListView) findViewById(R.id.list_view);
-        list.setAdapter(adapter);
+
         mainToolbarSetup();
+
+        DatabaseReference databaseProducts;
+        databaseProducts = FirebaseDatabase.getInstance().getReference("Product");
+
+        databaseProducts.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                products.clear();
+                for(DataSnapshot productSnapshot : dataSnapshot.getChildren()) {
+
+
+                    Product product = productSnapshot.getValue(Product.class);
+                    products.add(product);
+
+
+                }
+
+                ArrayProductAdapter adapter = new ArrayProductAdapter(MainScreenActivity.this, products);
+
+                ListView list = (ListView) findViewById(R.id.list_view);
+                list.setAdapter(adapter);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
 
     }
+
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//
+//        DatabaseReference databaseProducts;
+//        databaseProducts = FirebaseDatabase.getInstance().getReference("Product");
+//
+//        databaseProducts.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                products.clear();
+//                for(DataSnapshot productSnapshot : dataSnapshot.getChildren()) {
+//
+//
+//                    Product product = productSnapshot.getValue(Product.class);
+//                    products.add(product);
+//
+//
+//                }
+//
+//                ArrayProductAdapter adapter = new ArrayProductAdapter(MainScreenActivity.this, products);
+//
+//                ListView list = (ListView) findViewById(R.id.list_view);
+//                list.setAdapter(adapter);
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
+//
+//        Button button =  (Button) findViewById(R.id.add_button);
+//
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                goToAddItem();
+//            }
+//        });
+//
+//    }
+
 
     private void mainToolbarSetup(){
 
@@ -59,5 +135,11 @@ public class MainScreenActivity extends AppCompatActivity {
             });
         }
     }
+
+    private void goToAddItem() {
+        Intent intent = new Intent(this, AddItemActivity.class);
+        startActivity(intent);
+    }
+
 
 }

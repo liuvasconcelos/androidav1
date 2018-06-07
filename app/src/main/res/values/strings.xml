@@ -6,8 +6,10 @@
     <string name="loginrequest">Enter your login</string>
     <string name="passwordrequest">Enter your password</string>
     <string name="loginbutton">Login</string>
+    <string name="registerbutton">Register</string>
 
     <string name="toast">Invalid e-mail or password</string>
+    <string name="toast_register">Could not create user</string>
     <string name="backpress">Go back</string>
 
     <string name="price">Price</string>
@@ -19,4 +21,10 @@
     <string name="wingpaddle">Wing Paddle</string>
     <string name="chickenheart">Chicken Heart</string>
     <string name="rib">Rib</string>
+
+    <string name="addproduct">Add product</string>
+    <string name="addproduct_name">Product</string>
+    <string name="addproduct_description">Description</string>
+    <string name="toast_product">Success on register</string>
+
 </resources>

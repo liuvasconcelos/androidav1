@@ -7,8 +7,10 @@
     <string name="loginrequest">Digite seu e-mail</string>
     <string name="passwordrequest">Digite sua senha</string>
     <string name="loginbutton">Entrar</string>
+    <string name="registerbutton">Registrar</string>
 
     <string name="toast">E-mail ou senha incorreta</string>
+    <string name="toast_register">Não foi possível registrar usuário</string>
     <string name="backpress">Voltar</string>
 
     <string name="price">Preço: </string>
@@ -20,4 +22,9 @@
     <string name="wingpaddle">Coxinha da asa</string>
     <string name="chickenheart">Coração</string>
     <string name="rib">Costela</string>
+
+    <string name="addproduct">Adicionar produto</string>
+    <string name="addproduct_name">Produto</string>
+    <string name="addproduct_description">Descrição</string>
+    <string name="toast_product">Produto adicionado com sucesso</string>
 </resources>

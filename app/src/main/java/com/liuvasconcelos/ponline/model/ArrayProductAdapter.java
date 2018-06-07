@@ -44,9 +44,6 @@ public class ArrayProductAdapter extends ArrayAdapter {
             v = inflater.inflate(R.layout.item_recycle_view, parent, false);
         }
 
-        ImageView image = (ImageView) v.findViewById(R.id.list_view_item_image);
-        image.setImageResource(products.get(position).getImage());
-
         TextView name = (TextView) v.findViewById(R.id.list_view_item_product_name);
         name.setText(products.get(position).getName());
 
@@ -60,7 +57,6 @@ public class ArrayProductAdapter extends ArrayAdapter {
                 Intent intent = new Intent(context, DetailScreenActivity.class);
 
                 Bundle bundle = new Bundle();
-                bundle.putInt(DetailScreenActivity.IMAGE, products.get(position).getImage());
                 bundle.putString(DetailScreenActivity.NAME, products.get(position).getName());
                 bundle.putString(DetailScreenActivity.DESCRIPTION, products.get(position).getDescription());
                 intent.putExtras(bundle);
