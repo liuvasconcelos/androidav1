@@ -29,7 +29,7 @@ public class AddItemActivity extends AppCompatActivity {
         final EditText nameInfo = (EditText) findViewById(R.id.enter_add_item_name);
         final EditText descriptionInfo = (EditText) findViewById(R.id.enter_add_item_description);
         final EditText priceInfo = (EditText) findViewById(R.id.enter_add_item_price);
-        final EditText deliveryTimeInfo = (EditText) findViewById(R.id.enter_add_item_price);
+        final EditText deliveryTimeInfo = (EditText) findViewById(R.id.enter_add_item_time);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

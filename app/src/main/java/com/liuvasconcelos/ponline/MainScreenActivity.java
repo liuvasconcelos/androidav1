@@ -73,49 +73,6 @@ public class MainScreenActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//
-//        DatabaseReference databaseProducts;
-//        databaseProducts = FirebaseDatabase.getInstance().getReference("Product");
-//
-//        databaseProducts.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                products.clear();
-//                for(DataSnapshot productSnapshot : dataSnapshot.getChildren()) {
-//
-//
-//                    Product product = productSnapshot.getValue(Product.class);
-//                    products.add(product);
-//
-//
-//                }
-//
-//                ArrayProductAdapter adapter = new ArrayProductAdapter(MainScreenActivity.this, products);
-//
-//                ListView list = (ListView) findViewById(R.id.list_view);
-//                list.setAdapter(adapter);
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
-//
-//        Button button =  (Button) findViewById(R.id.add_button);
-//
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                goToAddItem();
-//            }
-//        });
-//
-//    }
-
 
     private void mainToolbarSetup(){
 

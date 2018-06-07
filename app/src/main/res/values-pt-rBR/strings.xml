@@ -27,4 +27,7 @@
     <string name="addproduct_name">Produto</string>
     <string name="addproduct_description">Descrição</string>
     <string name="toast_product">Produto adicionado com sucesso</string>
+
+    <string name="delete">Deletar produto</string>
+    <string name="update">Atualizar info</string>
 </resources>

@@ -57,8 +57,11 @@ public class ArrayProductAdapter extends ArrayAdapter {
                 Intent intent = new Intent(context, DetailScreenActivity.class);
 
                 Bundle bundle = new Bundle();
+                bundle.putString(DetailScreenActivity.ID, products.get(position).getId());
                 bundle.putString(DetailScreenActivity.NAME, products.get(position).getName());
                 bundle.putString(DetailScreenActivity.DESCRIPTION, products.get(position).getDescription());
+                bundle.putString(DetailScreenActivity.PRICE, products.get(position).getPrice());
+                bundle.putString(DetailScreenActivity.DATE, products.get(position).getDeliveryTime());
                 intent.putExtras(bundle);
 
                 context.startActivity(intent);

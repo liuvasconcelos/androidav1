@@ -27,4 +27,7 @@
     <string name="addproduct_description">Description</string>
     <string name="toast_product">Success on register</string>
 
+    <string name="delete">Delete product</string>
+    <string name="update">Update info</string>
+
 </resources>
