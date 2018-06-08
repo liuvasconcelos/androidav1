@@ -53,9 +53,6 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-//                            FirebaseUser usuario = FirebaseAuth.getInstance().getCurrentUser();
-//                            String email = usuario.getEmail();
-//                            System.out.println("usuario: "+email);
                             goToMainScreen();
                         } else {
                             showToast();
